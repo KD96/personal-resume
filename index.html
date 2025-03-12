@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kem Díaz - Financial Engineer, MBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            color: #2c3e50;
+            line-height: 1.5;
+            padding: 0;
+            background-color: #f5f7fa;
+            font-size: 14px;
+        }
+        
+        .cv-container {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 20px 30px;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .cv-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .cv-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #000000, #333333, #000000);
+            background-size: 200% 100%;
+            animation: gradientShift 5s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 15px;
+            position: relative;
+            background: linear-gradient(to bottom, rgba(240,244,248,0.8) 0%, rgba(255,255,255,0) 100%);
+            border-radius: 10px 10px 0 0;
+            padding-top: 10px;
+        }
+        
+        h1 {
+            color: #000000;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #333333, transparent);
+        }
+        
+        .contact-info {
+            margin: 10px 0;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 25px;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info span:hover {
+            background-color: #e9ecef;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info i {
+            color: #000000;
+            margin-right: 8px;
+        }
+        
+        .contact-info a {
+            transition: color 0.3s;
+            color: #2c3e50;
+        }
+        
+        .contact-info a:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            position: relative;
+            padding: 0 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateX(5px);
+        }
+        
+        h2 {
+            color: #000000;
+            font-size: 18px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #000000;
+            margin-right: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #000000, #333333);
+            border-radius: 3px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            display: inline-block;
+            font-size: 15px;
+            color: #000000;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            padding-bottom: 2px;
+        }
+        
+        .job-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #333333;
+            transition: width 0.3s ease;
+        }
+        
+        .job:hover .job-title::after {
+            width: 100%;
+        }
+        
+        .job-date {
+            float: right;
+            color: #5d6d7e;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 3px 8px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-date i {
+            margin-right: 5px;
+            color: #000000;
+        }
+        
+        .company-location {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 14px;
+            align-items: center;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #34495e;
+            position: relative;
+            padding-left: 2px;
+            transition: color 0.3s ease;
+        }
+        
+        .job:hover .company {
+            color: #000000;
+        }
+        
+        .location {
+            color: #5d6d7e;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(248, 249, 250, 0.7);
+            padding: 2px 6px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .job:hover .location {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .location::before {
+            content: '\f3c5';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            margin-right: 5px;
+            font-size: 12px;
+            color: #000000;
+        }
+        
+        .description {
+            margin: 8px 0;
+            font-style: italic;
+            font-size: 14px;
+            color: #5d6d7e;
+            line-height: 1.5;
+            border-left: 3px solid #000000;
+            padding: 6px 10px;
+            background-color: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .job:hover .description {
+            background-color: #eef2f7;
+            border-left-width: 5px;
+            transform: translateX(3px);
+        }
+        
+        .job {
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .job::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: linear-gradient(to bottom, #000000, #333333);
+            transition: height 0.3s ease;
+        }
+        
+        .job:hover {
+            transform: translateX(8px);
+            background-color: #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .job:hover::before {
+            height: 100%;
+        }
+        
+        .job:last-child {
+            margin-bottom: 0;
+        }
+        
+        ul {
+            padding-left: 18px;
+            margin: 8px 0;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            position: relative;
+            line-height: 1.5;
+            padding-left: 5px;
+            transition: transform 0.2s ease;
+        }
+        
+        li:hover {
+            transform: translateX(3px);
+        }
+        
+        li::before {
+            content: '•';
+            color: #000000;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            transition: color 0.3s ease;
+        }
+        
+        .job:hover li::before {
+            color: #333333;
+        }
+        
+        a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #333333;
+            transition: width 0.3s ease;
+        }
+        
+        a:hover {
+            color: #333333;
+        }
+        
+        a:hover::after {
+            width: 100%;
+        }
+        
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            transition: transform 0.2s ease;
+        }
+        
+        p:hover {
+            transform: translateX(3px);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #000000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .skills-grid:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            background-color: #eef2f7;
+        }
+        
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        
+        .skill-category strong {
+            color: #000000;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            display: inline-block;
+            padding-bottom: 4px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-category strong i {
+            margin-right: 8px;
+            color: #333333;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4px;
+            transition: transform 0.2s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateX(3px);
+        }
+        
+        .skill-icon {
+            margin-right: 8px;
+            color: #000000;
+            font-size: 14px;
+        }
+        
+        .highlight-text {
+            background: linear-gradient(120deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .professional-summary p {
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: justify;
+            position: relative;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #000000;
+        }
+        
+        .education-grid {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .education-item {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 10px;
+            border-left: 3px solid #000000;
+            transition: all 0.3s ease;
+        }
+        
+        .education-item:hover {
+            transform: translateX(5px);
+            background-color: #eef2f7;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .school {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #34495e;
+            margin-bottom: 5px;
+        }
+        
+        .degree {
+            font-size: 14px;
+            color: #5d6d7e;
+        }
+        
+        .specialization {
+            font-style: italic;
+            font-size: 13px;
+        }
+        
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.5cm;
+            }
+            
+            body {
+                background-color: #fff;
+                width: 21cm;
+                height: 29.7cm;
+                margin: 0 auto;
+                font-size: 12px;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 1cm 1cm;
+                max-width: 100%;
+                border-radius: 0;
+                transform: none !important;
+            }
+            
+            .cv-container::before {
+                display: none;
+            }
+            
+            /* Ensure content fits on exactly two pages */
+            .page-break {
+                page-break-before: always;
+                margin-top: 0;
+                padding-top: 0;
+            }
+            
+            /* First page specific margins */
+            .first-page {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            /* Second page specific margins */
+            .second-page {
+                margin-top: 0;
+                padding-top: 0.5cm;
+            }
+            
+            .job {
+                page-break-inside: avoid;
+                transform: none !important;
+                box-shadow: none !important;
+                background-color: transparent !important;
+                border: none !important;
+            }
+            
+            .job::before {
+                display: none;
+            }
+            
+            .job:hover .description,
+            .job:hover .location,
+            .job:hover .company,
+            .job:hover li::before,
+            .job:hover .job-title::after {
+                transform: none !important;
+                background-color: transparent !important;
+                color: inherit !important;
+                border-left-width: 3px !important;
+            }
+            
+            .section:hover,
+            p:hover,
+            li:hover,
+            .skill-item:hover {
+                transform: none !important;
+            }
+            
+            a {
+                color: #2c3e50;
+            }
+            
+            a::after {
+                display: none;
+            }
+            
+            /* Ensure proper text size for print */
+            p, li, .contact-info {
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 16pt;
+            }
+            
+            h2 {
+                font-size: 14px;
+            }
+            
+            .contact-info span {
+                background-color: transparent;
+                box-shadow: none;
+                border: none;
+            }
+            
+            .skills-grid {
+                box-shadow: none;
+                transform: none !important;
+            }
+            
+            .description {
+                box-shadow: none;
+                transform: none !important;
+            }
+            
+            .professional-summary p {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 750px) {
+            .cv-container {
+                padding: 15px;
+                margin: 10px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .job-date {
+                float: none;
+                display: block;
+                margin-top: 5px;
+                margin-bottom: 8px;
+                width: fit-content;
+            }
+            
+            .company-location {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .location {
+                margin-top: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="first-page">
+            <header>
+                <h1>KEM DÍAZ</h1>
+                <h2 style="border:none; margin-bottom:15px; text-transform: uppercase; font-size: 16px; letter-spacing: 3px; color: #34495e; font-weight: 600; text-align: center; display: block; margin-left: auto; margin-right: auto; position: relative; padding-bottom: 10px;">
+                    Financial Engineer, MBA
+                </h2>
+                <div class="contact-info">
+                    <span style="background-color: #f0f4f8; border-left: 3px solid #000000; transition: all 0.3s ease;"><i class="fas fa-map-marker-alt" style="color: #333333;"></i> Madrid, Spain</span>
+                    <span style="background-color: #f0f4f8; border-left: 3px solid #000000; transition: all 0.3s ease;"><i class="fas fa-phone" style="color: #333333;"></i> 685039499</span>
+                    <span style="background-color: #f0f4f8; border-left: 3px solid #000000; transition: all 0.3s ease;"><i class="fas fa-envelope" style="color: #333333;"></i> <a href="mailto:kemjian@gmail.com" style="font-weight: 600;">kemjian@gmail.com</a></span>
+                    <span style="background-color: #f0f4f8; border-left: 3px solid #000000; transition: all 0.3s ease;"><i class="fab fa-linkedin" style="color: #333333;"></i> <a href="https://www.linkedin.com/in/kemdiaz96/" target="_blank" style="font-weight: 600;">LinkedIn</a></span>
+                    <span style="background-color: #f0f4f8; border-left: 3px solid #000000; transition: all 0.3s ease;"><i class="fas fa-passport" style="color: #333333;"></i> Work Permit</span>
+                    <span style="background-color: #f0f4f8; border-left: 3px solid #000000; transition: all 0.3s ease;"><i class="fab fa-github" style="color: #333333;"></i> <a href="https://github.com/KD96" target="_blank" style="font-weight: 600;">GitHub</a></span>
+                </div>
+            </header>
+            
+            <div class="section professional-summary">
+                <h2>Professional Summary</h2>
+                <p>
+                    Seasoned Financial Engineer with 9+ years of expertise spanning Banking, Venture Capital, and SaaS sectors. MBA graduate with specialized tech training and experience in international markets including Peru, Spain, and the United States. Combines advanced technical proficiency in product development and data analytics with comprehensive business acumen and deep financial knowledge. Dedicated to delivering impactful solutions, establishing efficient processes, and optimizing financial outcomes.
+                </p>
+            </div>
+            
+            <div class="section education">
+                <h2>Education</h2>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <div style="display: flex; align-items: center; background-color: #f8f9fa; padding: 8px 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <i class="fas fa-graduation-cap" style="font-size: 16px; color: #333; margin-right: 10px;"></i>
+                        <div style="flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong>IE Business School</strong>
+                                <span style="font-size: 13px; color: #5d6d7e;"><i class="fas fa-map-marker-alt"></i> Madrid, Spain | <i class="far fa-calendar-alt"></i> 2021-2022</span>
+                            </div>
+                            <div style="font-size: 13px; margin-top: 2px;">Data Science Bootcamp</div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; background-color: #f8f9fa; padding: 8px 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <i class="fas fa-graduation-cap" style="font-size: 16px; color: #333; margin-right: 10px;"></i>
+                        <div style="flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong>EAE Business School</strong>
+                                <span style="font-size: 13px; color: #5d6d7e;"><i class="fas fa-map-marker-alt"></i> Madrid, Spain | <i class="far fa-calendar-alt"></i> 2020-2021</span>
+                            </div>
+                            <div style="font-size: 13px; margin-top: 2px;">International MBA (Data Science & AI Minor)</div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; background-color: #f8f9fa; padding: 8px 12px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+                        <i class="fas fa-graduation-cap" style="font-size: 16px; color: #333; margin-right: 10px;"></i>
+                        <div style="flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <strong>University of Lima</strong>
+                                <span style="font-size: 13px; color: #5d6d7e;"><i class="fas fa-map-marker-alt"></i> Lima, Peru | <i class="far fa-calendar-alt"></i> 2013-2017</span>
+                            </div>
+                            <div style="font-size: 13px; margin-top: 2px;">B.Sc. in Industrial Engineering</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="job">
+                    <div class="company-location">
+                        <span class="company">MSMK</span>
+                        <span class="location">Madrid, Spain</span>
+                    </div>
+                    <p class="description">English Business school focused on digital business education and contemporary management programs</p>
+                    <div>
+                        <span class="job-title">Project Management Professor</span>
+                            <span class="job-date"><i class="far fa-calendar-alt"></i> 02/2025 – Present</span>
+                        </div>
+                    <ul style="margin: 5px 0;">
+                        <li>Teaching project management methodologies with practical applications in contemporary business environments</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="company-location">
+                        <span class="company">Valuat</span>
+                        <span class="location">Madrid, Spain</span>
+                    </div>
+                    <p class="description">SaaS platform for VC/PE portfolio management (<span class="highlight-text">€6B+ AuM</span>)</p>
+                    <div>
+                        <span class="job-title">Data & Financial Director</span>
+                        <span class="job-date"><i class="far fa-calendar-alt"></i> 03/2022 – Present</span>
+                    </div>
+                    <ul style="margin: 5px 0;">
+                        <li>Drove <span class="highlight-text">1000% MRR growth</span> (<span class="highlight-text">€5K to €50K</span>) through strategic product development and client acquisition</li>
+                        <li>Engineered proprietary Python-based financial reporting system automating VC-specific metrics</li>
+                        <li>Secured <span class="highlight-text">€500K</span> seed funding and led successful ISO 27001 certification process</li>
+                        <li>Developed advanced financial models for Neotech and ENISA financing (<span class="highlight-text">€500K</span> each)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-break second-page">
+            <div class="section">
+                <div class="job">
+                    <div class="company-location">
+                        <span class="company">Chargy Technologies</span>
+                        <span class="location">Madrid, Spain (Remote)</span>
+                    </div>
+                    <p class="description">IoT startup specializing in smart power banks for DOOH marketing</p>
+                    <div>
+                        <span class="job-title">External CFO</span>
+                        <span class="job-date"><i class="far fa-calendar-alt"></i> 01/2023 – 12/2024</span>
+                    </div>
+                    <ul style="margin: 5px 0;">
+                        <li>Architected comprehensive financial models with <span class="highlight-text">automated dashboard reporting</span> for treasury control</li>
+                        <li>Implemented IFRS-compliant accounting framework ensuring regulatory compliance</li>
+                        <li>Orchestrated <span class="highlight-text">€1M+</span> investment round with Business Angels and VCs</li>
+                        <li>Designed data-driven investor presentations quantifying market opportunity and financial projections</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="company-location">
+                        <span class="company">Finutive</span>
+                        <span class="location">Madrid, Spain</span>
+                    </div>
+                    <p class="description">SaaS provider for legal, accounting, and HR automation for SMEs</p>
+                    <div>
+                        <span class="job-title">Financial Consultant</span>
+                        <span class="job-date"><i class="far fa-calendar-alt"></i> 03/2021 – 05/2022</span>
+                    </div>
+                    <ul style="margin: 5px 0;">
+                        <li>Designed financial models enabling startups to secure <span class="highlight-text">€50K–€500K</span> in government funding</li>
+                        <li>Built client portfolio of <span class="highlight-text">10</span> key accounts and <span class="highlight-text">50+</span> prospects through strategic business development</li>
+                        <li>Developed automated lead tracking system optimizing conversion rates by <span class="highlight-text">35%</span></li>
+                        <li>Advised SMEs on financial strategies yielding measurable operational improvements</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="company-location">
+                        <span class="company">Interbank</span>
+                        <span class="location">Lima, Peru</span>
+                    </div>
+                    <p class="description">Top-three Peruvian bank (NYSE-listed Intercorp Group)</p>
+                    <div>
+                        <span class="job-title">Business Analyst Sr in Commercial Banking</span>
+                        <span class="job-date"><i class="far fa-calendar-alt"></i> 08/2017 – 10/2020</span>
+                    </div>
+                    <ul style="margin: 5px 0;">
+                        <li>Structured <span class="highlight-text">$3M-$4M</span> credit lines for major corporations using advanced risk analysis models</li>
+                        <li>Developed Excel-based client portfolio analytics system with automated daily updates</li>
+                        <li>Secured and managed <span class="highlight-text">€6M</span> credit lines for medium/large-cap companies</li>
+                        <li>Implemented strategic client relationship management protocols increasing portfolio retention by <span class="highlight-text">20%</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Technical & Professional Expertise</h2>
+                <div class="skills-grid">
+                    <div>
+                        <p class="skill-category"><strong><i class="fas fa-globe"></i> Languages:</strong></p>
+                        <ul style="margin: 5px 0;">
+                            <li>Spanish (Native), English (C1 Proficient)</li>
+                        </ul>
+                        
+                        <p class="skill-category"><strong><i class="fas fa-laptop-code"></i> Technical Skills:</strong></p>
+                        <ul style="margin: 5px 0;">
+                            <li>Python, JavaScript, PHP, HTML, CSS</li>
+                            <li>Tableau, Pipedrive, Advanced Excel</li>
+                            <li>Proficient in API integration and automation</li>
+                            <li>Prompt engineering experience</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <p class="skill-category"><strong><i class="fas fa-chart-line"></i> Finance & Innovation:</strong></p>
+                        <ul style="margin: 5px 0;">
+                            <li>Proficient in Financial modeling and Business Analysis</li>
+                            <li>Active stock trader with personal portfolio</li>
+                            <li>Corporate Finance Diploma & CFA Level I Candidate</li>
+                            <li>Comprehensive knowledge of IFRS/GAAP accounting standards and implementation</li>
+                            <li>Financial SaaS solution developer (Incubator program, 2022)</li>
+                            <li>25+ specialized certifications (IE Business School, IBM, HEC, Bloomberg)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
